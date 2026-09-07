@@ -1,44 +1,22 @@
--- POBUNK configuration
--- CC:Tweaked 1.16.5
+-- OSBUNK configuration
+-- CC:Tweaked for Minecraft 1.21.1
 
 return {
-    title = "POBUNK CONTROL",
-    version = "1.0.0",
-
-    -- Optional monitor. Example: top / left / right / back
-    monitor_side = "top",
-
-    -- Optional modem side for remote control
-    modem_side = "right",
-    remote_enabled = true,
-    remote_password = "1234",
-    remote_channel = 7310,
-
-    -- Redstone sides used by the bunker controller
-    outputs = {
-        door = "front",       -- main blast door
-        lights = "back",      -- bunker lighting
-        ventilation = "left",-- ventilation/fans
-        alarm = "bottom"      -- siren/alarm
-    },
-
-    inputs = {
-        motion = "top",          -- perimeter/motion sensor signal
-        pressure = "right",      -- pressure/door sensor signal
-        emergency = "bottom"     -- emergency button signal
-    },
-
-    -- Default states
-    startup_lights = true,
-    startup_ventilation = true,
-    startup_door_locked = true,
-
-    -- Security
+    name = "OSBUNK",
+    version = "2.0.0",
     pin = "2580",
-    max_attempts = 3,
-    lockdown_on_emergency = true,
-    auto_alarm_on_motion = false,
-
-    -- Logging
-    max_log_entries = 80
+    start_locked = true,
+    boot_sound = true,
+    default_theme = "bunker",
+    monitor_scale = 0.5,
+    rednet_channel = 7310,
+    remote_password = "1234",
+    allow_remote = true,
+    bunker = {
+        door = "front",
+        lights = "back",
+        ventilation = "left",
+        alarm = "bottom"
+    },
+    backup_dir = "/osbunk_backups"
 }
