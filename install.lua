@@ -6,6 +6,8 @@ local BASE = "https://raw.githubusercontent.com/Frez7373/POBUNK/main/"
 local files = {
     {url=BASE.."config.lua", path="/config.lua"},
     {url=BASE.."bunker.lua", path="/bunker.lua"},
+    {url=BASE.."bunker_extra.lua", path="/bunker_extra.lua"},
+    {url=BASE.."diagnostics.lua", path="/diagnostics.lua"},
     {url=BASE.."startup.lua", path="/startup.lua"}
 }
 
@@ -41,7 +43,8 @@ print("")
 print("POBUNK installed successfully!")
 print("")
 print("Default PIN: 2580")
-print("Change it in /config.lua before use.")
+print("Service menu is now enabled.")
+print("Press 1-5 in the service menu for tools.")
 print("")
 print("Rebooting...")
 sleep(2)
