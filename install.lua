@@ -8,6 +8,7 @@ local files = {
     {url=BASE.."bunker.lua", path="/bunker.lua"},
     {url=BASE.."bunker_extra.lua", path="/bunker_extra.lua"},
     {url=BASE.."diagnostics.lua", path="/diagnostics.lua"},
+    {url=BASE.."hardware.lua", path="/hardware.lua"},
     {url=BASE.."startup.lua", path="/startup.lua"}
 }
 
@@ -43,8 +44,8 @@ print("")
 print("POBUNK installed successfully!")
 print("")
 print("Default PIN: 2580")
-print("Service menu is now enabled.")
-print("Press 1-5 in the service menu for tools.")
+print("Hardware Center supports: printer, network, drive, speaker.")
+print("Service menu is enabled.")
 print("")
 print("Rebooting...")
 sleep(2)
