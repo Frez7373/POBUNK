@@ -1,13 +1,14 @@
--- POBUNK automatic startup
--- Extra service menu is available before the main bunker control.
+-- OSBUNK automatic startup
+-- CC:Tweaked / Minecraft 1.21.1
 
-if fs.exists("/bunker_extra.lua") then
-    shell.run("/bunker_extra.lua")
-end
-
-if fs.exists("/bunker.lua") then
+if fs.exists("/osbunk.lua") then
+    shell.run("/osbunk.lua")
+elseif fs.exists("/bunker.lua") then
+    print("OSBUNK is missing. Starting legacy POBUNK...")
+    sleep(1)
     shell.run("/bunker.lua")
 else
-    print("POBUNK is not installed.")
-    print("Run: wget run https://raw.githubusercontent.com/Frez7373/POBUNK/main/install.lua")
+    print("POBUNK/OSBUNK is not installed.")
+    print("Run:")
+    print("wget run https://raw.githubusercontent.com/Frez7373/POBUNK/main/install.lua")
 end
