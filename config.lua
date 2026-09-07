@@ -3,7 +3,7 @@
 
 return {
     title = "POBUNK CONTROL",
-    version = "1.1.0",
+    version = "1.0.0",
 
     -- Optional monitor. Example: top / left / right / back
     monitor_side = "top",
@@ -39,13 +39,6 @@ return {
     lockdown_on_emergency = true,
     auto_alarm_on_motion = false,
 
-    -- New safety features
-    -- 0 disables automatic relock. Otherwise the door relocks after this many seconds.
-    auto_relock_seconds = 30,
-    -- If the pressure/door sensor becomes active while the door is unlocked,
-    -- automatically start a bunker lockdown.
-    auto_lockdown_on_pressure = false,
-
     -- Logging
-    max_log_entries = 100
+    max_log_entries = 80
 }
