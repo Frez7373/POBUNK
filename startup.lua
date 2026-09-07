@@ -1,4 +1,10 @@
 -- POBUNK automatic startup
+-- Extra service menu is available before the main bunker control.
+
+if fs.exists("/bunker_extra.lua") then
+    shell.run("/bunker_extra.lua")
+end
+
 if fs.exists("/bunker.lua") then
     shell.run("/bunker.lua")
 else
